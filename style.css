@@ -1,0 +1,679 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#F5EAD7;
+    color:#123B73;
+
+}
+
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+
+header{
+
+    height:80px;
+    background:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 8%;
+
+    position:sticky;
+    top:0;
+
+    z-index:10;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.menu{
+
+    font-size:30px;
+    cursor:pointer;
+
+}
+
+
+.logo{
+
+    font-size:25px;
+    font-weight:700;
+
+}
+
+
+.profile{
+
+    font-size:25px;
+
+}
+
+
+
+
+
+/* ================= SIDEBAR ================= */
+
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:-300px;
+
+    width:280px;
+
+    height:100%;
+
+    background:white;
+
+    padding:30px;
+
+    box-shadow:10px 0 30px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+    z-index:20;
+
+}
+
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+
+.sidebar h2{
+
+    margin-bottom:30px;
+
+}
+
+
+.sidebar a{
+
+    display:block;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:15px;
+
+}
+
+
+.sidebar a:hover{
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+}
+
+
+
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+    padding:70px 8%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+
+
+.hero-text{
+
+    max-width:600px;
+
+}
+
+
+.hero h1{
+
+    font-size:55px;
+
+    line-height:1.1;
+
+}
+
+
+.hero p{
+
+    margin:25px 0;
+
+    font-size:20px;
+
+    color:#555;
+
+}
+
+
+
+
+/* ================= SEARCH ================= */
+
+
+.search-box{
+
+    background:white;
+
+    padding:8px;
+
+    width:500px;
+
+    border-radius:50px;
+
+    display:flex;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px;
+
+}
+
+
+.search-box button{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:15px 30px;
+
+}
+
+
+
+
+
+/* ================= BUTTON ================= */
+
+
+button,
+.primary,
+.secondary{
+
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.primary{
+
+    display:inline-block;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    border:none;
+
+}
+
+
+.secondary{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#2563EB;
+
+    border:2px solid #2563EB;
+
+    padding:13px 35px;
+
+    border-radius:30px;
+
+}
+
+
+.primary:hover,
+.secondary:hover,
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+
+
+
+
+/* ================= HERO CARD ================= */
+
+
+.hero-card{
+
+    background:white;
+
+    padding:40px;
+
+    width:350px;
+
+    border-radius:30px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+
+.mini-card{
+
+    background:#EFF6FF;
+
+    padding:20px;
+
+    margin-top:15px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+
+
+/* ================= SECTIONS ================= */
+
+
+.featured,
+.categories,
+.community,
+.contributors{
+
+    padding:60px 8%;
+
+}
+
+
+.featured h1,
+.categories h1,
+.community h1,
+.contributors h1{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+
+
+
+/* ================= CARDS ================= */
+
+
+.card,
+.note-card,
+.discussion{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+
+.card:hover,
+.note-card:hover,
+.discussion:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+
+
+.note-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+.note-card p{
+
+    margin:10px 0;
+
+}
+
+
+
+
+
+
+
+/* ================= DISCUSSION ================= */
+
+
+.discussion{
+
+    max-width:700px;
+
+    margin:20px auto;
+
+}
+
+
+.discussion button{
+
+    margin-top:20px;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/* ================= STATS ================= */
+
+
+.stats{
+
+    padding:60px 8%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    text-align:center;
+
+}
+
+
+.stats h2{
+
+    font-size:45px;
+
+    color:#2563EB;
+
+}
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    background:#123B73;
+
+    color:white;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* ================= OTHER PAGES ================= */
+
+
+.upload-box,
+.chat-box,
+.profile-card,
+.create-post,
+.ask-box{
+
+    background:white;
+
+    max-width:700px;
+
+    margin:40px auto;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+
+.ai-message{
+
+    background:#EFF6FF;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+
+.user-message{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:768px){
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.hero h1{
+
+    font-size:40px;
+
+}
+
+
+.search-box{
+
+    width:100%;
+
+}
+
+
+.hero-card{
+
+    width:90%;
+
+}
+
+
+.stats{
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+
+.logo{
+
+    font-size:18px;
+
+}
+
+
+}
+
+/* AI CHAT INPUT */
+
+.chat-input{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    gap:15px;
+
+}
+
+
+.chat-input input{
+
+    flex:1;
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    border:1px solid #ddd;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+
+.chat-input button{
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+}
